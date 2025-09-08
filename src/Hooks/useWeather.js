@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import api from "../api";
+import api from "../api.js";
 
 export function useWeather(lat = -27.3621, lon = -55.9009) {
   const [current, setCurrent] = useState(null);

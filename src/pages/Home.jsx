@@ -1,7 +1,7 @@
-import { useWeather } from "../hooks/useWeather";
-import WeatherCard from "../components/WeatherCard";
-import ForecastCard from "../components/ForecastCard";
-import HighlightCard from "../components/HighlightCard";
+import { useWeather } from "../hooks/useWeather.js";
+import WeatherCard from "../components/WeatherCard.jsx";
+import ForecastCard from "../components/ForecastCard.jsx";
+import HighlightCard from "../components/HighlightCard.jsx";
 
 export default function Home() {
   const { current, daily, loading, error } = useWeather();
@@ -20,6 +20,7 @@ export default function Home() {
         <p className="mt-2 text-lg">Posadas</p>
       </div>
       <div className="w-full md:w-2/3 p-6">
+        {/* Pronóstico Próximos Días */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
           {daily.slice(0, 5).map((day, idx) => (
             <ForecastCard
@@ -31,8 +32,6 @@ export default function Home() {
             />
           ))}
         </div>
-
-        {/* Highlights */}
         <h2 className="text-xl font-semibold mb-4">Today's Highlights</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <HighlightCard title="Wind Status" value={current.wind_speed} unit=" m/s" />
