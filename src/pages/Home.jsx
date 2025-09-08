@@ -1,4 +1,4 @@
-import { useWeather } from "../hooks/useWeather.jsx";
+import { useWeather } from "../hooks/UseWeather.jsx";
 import WeatherCard from "../components/WeatherCard.jsx";
 import ForecastCard from "../components/ForecastCard.jsx";
 import HighlightCard from "../components/HighlightCard.jsx";
